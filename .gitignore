@@ -1,0 +1,7 @@
+__pycache__
+patches/*
+output/*
+plots/*
+data/*
+data.zip
+venv/*

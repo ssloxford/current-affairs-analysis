@@ -1,0 +1,9 @@
+Data collector software versions. Indicated in INFO header of raw traces
+
+1 - Initial version
+2 - Accept SessionSetupRes giving simple OK instead of OK_NewSessionEstablished
+3 - Ignore lack of secure renegotiation
+4 - Fix tls V20 settings
+5 - Add DateTimeNow logging
+6 - Change info block contents
+7 - add data collector version to info header. Patch weak testing
