@@ -33,8 +33,8 @@ According to our dataset anonymity discussed in the paper, metadata, photos, and
 #### Code files
 
 The code was written in Python 3.9 on Windows 10.
-It has also been tested in Python 3.12 on Kubuntu 24.04.1 LTS, the remaining instructions are for this version.
-Only standard packages are used, the code should be portable to most platforms and future versions.
+To ensure consistency, our instructions in this document assume a fresh [Kubuntu 24.04.1 LTS](https://cdimage.ubuntu.com/kubuntu/releases/24.04.1/release/) virtual machine, using Python 3.12.
+Only standard packages are used, so the instructions should work with minimal modifications on other similair platforms. A virtual machine is not required for day to day use of the artifacts.
 
 To set up, download the repository, and execute
 ```sh
@@ -47,10 +47,10 @@ This installs the necessary system packages, downloads our dataset, creates a Py
 The `proc_code/` folder contains a small python library for loading, managing and analysing data in accordance with the above format.
 
 Inside this, the `proc_code/webserver/` folder contains a small webserver that allows interactive management of the data.
-To launch the server, in the folder of this `md` file run `python3 -m proc_code.webserver`
+To launch the server, in the folder of this `README` file run `python3 -m proc_code.webserver`
 Open http://localhost:8000 for a static view or http://localhost:8000?edit to manage the data.
 
-**Warning:** Do not edit any data file or use any other script while the webserver is running. On exit (SIGINT) it will save the data back to disk, overwriting any external changes.
+**Warning:** Do not edit any data files or use any other script while the webserver is running. On exit (SIGINT) it will save the data back to disk, overwriting any external changes.
 
 To build a safe to view static website from the data, run `python3 -m proc_code.build_static`. This will start the webserver, `wget` each page, export a static HTML website into the `data/` folder. This can then be hosted using any static webserver, such as `python3 -m http.server`. For simplicity, `.sh` and `.bat` files are provided in `data/` to help with this.
 
